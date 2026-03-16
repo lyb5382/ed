@@ -50,8 +50,8 @@ const CharacterGrid = () => {
                                 onClick={() => setSelectedChar(char)} // 카드 클릭 시 모달 열림!
                             >
                                 <div className="roster-img-wrapper">
-                                    <img src={`/src/assets/${char.id}_base.webp`} alt={char.name} className="roster-img base-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500/111/333?text=NO+IMAGE' }} />
-                                    <img src={`/src/assets/${char.id}_combat.webp`} alt={`${char.name} combat`} className="roster-img combat-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500/300/600?text=CLASSIFIED' }} />
+                                    <img src={`/assets/${char.id}_base.webp`} alt={char.name} className="roster-img base-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500/111/333?text=NO+IMAGE' }} />
+                                    <img src={`/assets/${char.id}_combat.webp`} alt={`${char.name} combat`} className="roster-img combat-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500/300/600?text=CLASSIFIED' }} />
                                     <div className="roster-overlay">
                                         <span className="roster-spec">{char.spec}</span>
                                     </div>
