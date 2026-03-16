@@ -113,22 +113,27 @@
     z-index: 2;
     opacity: 1;
     filter: grayscale(30%);
-    transition: opacity 0.3s ease; /* 부드럽게 사라지게 */
+    transition: opacity 0.3s ease;
+    /* 부드럽게 사라지게 */
 }
 
 .combat-img {
     z-index: 1;
-    opacity: 0; /* 핵심 수정! 기본 상태에선 아예 안 보이게 숨김 */
+    opacity: 0;
+    /* 핵심 수정! 기본 상태에선 아예 안 보이게 숨김 */
     filter: contrast(120%);
-    transition: opacity 0.3s ease; /* 부드럽게 나타나게 */
+    transition: opacity 0.3s ease;
+    /* 부드럽게 나타나게 */
 }
 
 .roster-card:hover .base-img {
-    opacity: 0; /* 마우스 올리면 기본 짤 꺼짐 */
+    opacity: 0;
+    /* 마우스 올리면 기본 짤 꺼짐 */
 }
 
 .roster-card:hover .combat-img {
-    opacity: 1; /* 마우스 올리면 전투 짤 켜짐! */
+    opacity: 1;
+    /* 마우스 올리면 전투 짤 켜짐! */
 }
 
 .roster-overlay {
@@ -202,10 +207,30 @@
     width: 100%;
     max-width: 900px;
     position: relative;
-    overflow: hidden;
+
+    /* 🚨 여기 2줄이 폰 화면 뚫고 나가는 거 막아주는 핵심! */
+    max-height: 85vh;
+    /* 모달창이 폰 화면 높이의 85%까지만 커지게 제한 */
+    overflow-y: auto;
+    /* 내용이 넘치면 모달창 '안에서' 스크롤되게 만듦 */
+
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     border-top: 3px solid #dc2626;
-    /* 상단 핏빛 포인트 */
+}
+
+/* 🩸 (보너스) 모달창 스크롤바 좆간지 핏빛 커스텀 ㅋㅋㅋ */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #dc2626;
+    /* 스크롤바 막대기 빨간색으로! */
+    border-radius: 4px;
 }
 
 .modal-close-btn {
