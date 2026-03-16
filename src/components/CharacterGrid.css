@@ -274,29 +274,6 @@
     filter: contrast(110%) brightness(0.9);
 }
 
-/* 📱 모바일 버전: 캐릭터 크기를 세로 기준으로 뻥튀기! */
-@media (max-width: 767px) {
-    .modal-image-part {
-        /* 모바일에서 캐릭터가 큼직하게 보일 만큼 높이 확보 */
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .modal-image-part img {
-        /* 가로(Width) 대신 세로(Height)를 꽉 채우게 강제! */
-        width: auto;
-        height: 100%;
-        min-width: 100%;
-        /* 혹시 이미지가 얇으면 가로도 채우게 */
-
-        /* 캐릭터 얼굴(위쪽) 위주로 크게 크롭 */
-        object-fit: cover;
-        object-position: center top;
-    }
-}
-
 .modal-info-part {
     flex: 1.2;
     padding: 2.5rem;
