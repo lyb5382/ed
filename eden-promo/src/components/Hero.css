@@ -1,0 +1,109 @@
+/* Hero 컴포넌트 전용 스타일 */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5rem 1rem;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    /* 렌조 쌤 일러스트 경로 */
+    background-image: url('../assets/renzo_1.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    /* 어둡게 눌러서 위압감 조성 */
+}
+
+/* 텍스트 가독성을 위한 피의 그라데이션 */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.95));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* 까리한 시스템 경고문 스타일 */
+.hero-subtitle {
+    color: #dc2626;
+    /* 핏빛 레드 */
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    /* 타자기/해킹 느낌 */
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-title-sub {
+    color: #9ca3af;
+    /* 서늘한 회색 */
+}
+
+.hero-description {
+    color: #d1d5db;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+}
+
+/* 하단 스크롤 유도 디자인 */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    z-index: 10;
+    color: #6b7280;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-scroll-indicator span {
+    margin-bottom: 0.5rem;
+}
+
+.hero-scroll-line {
+    width: 1px;
+    height: 2.5rem;
+    background: linear-gradient(to bottom, #6b7280, transparent);
+}
+
+/* PC 화면일 때 폰트 사이즈 키우기 */
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.5rem;
+    }
+}
