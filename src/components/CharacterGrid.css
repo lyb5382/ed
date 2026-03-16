@@ -259,6 +259,12 @@
     .modal-layout {
         flex-direction: row;
     }
+
+    .modal-image-part {
+        flex: 1;
+        background: #111;
+        min-height: 200px;
+    }
 }
 
 .modal-image-part {
