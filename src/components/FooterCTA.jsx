@@ -20,7 +20,8 @@ const FooterCTA = () => {
             <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onHoverStart={play} // 마우스 올리면 철컥!
+                onHoverStart={play} // PC용 (마우스 올리면 철컥!)
+                onTapStart={play}   // 🚨 모바일용 추가! (손가락 닿는 순간 철컥!)
                 className="footer-btn"
                 onClick={() => window.open("https://share.crack.wrtn.ai/y35bon", "_blank")}
             >
