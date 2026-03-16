@@ -264,39 +264,40 @@
 .modal-image-part {
     flex: 1;
     background: #111;
-    height: 450px;
-    /* 모바일 전용 높이 */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    min-height: 500px;
+    /* PC에서 최소 높이 확보 */
 }
 
 .modal-image-part img {
-    width: auto;
+    width: 100%;
     height: 100%;
-    /* 세로 꽉 채우기 */
     object-fit: cover;
-    object-position: center top;
+    /* 가로/세로 비율 맞춰서 꽉 채움 */
+    filter: contrast(110%) brightness(0.9);
 }
 
-/* 💻 PC 화면 (768px 이상) - 가로 너비 기준 */
-@media (min-width: 768px) {
+/* 📱 모바일: 세로 레이아웃 (767px 이하일 때만!) */
+@media (max-width: 767px) {
     .modal-image-part {
-        height: auto;
-        /* 고정 높이 해제 */
-        min-height: 500px;
+        height: 450px;
+        /* 모바일에서만 세로 높이 고정 */
+        width: 100%;
+        overflow: hidden;
     }
 
     .modal-image-part img {
-        width: 100%;
-        /* 가로 꽉 채우기 (가로 기준) */
+        width: auto;
+        /* 가로 제약 풀기 */
         height: 100%;
-        /* 세로도 꽉 채워서 공백 제거 */
+        /* 세로를 450px에 꽉 맞춤 */
+        min-width: 100%;
+        /* 혹시 이미지가 얇으면 가로도 채우게 */
         object-fit: cover;
-        /* 비율 맞춰서 시원하게 크롭 */
-        object-position: center 20%;
-        /* 캐릭터 얼굴 위치에 맞게 살짝 위로 조정 */
+        object-position: center top;
+        /* 얼굴 위주로 크롭 */
     }
 }
 
