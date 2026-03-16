@@ -265,8 +265,6 @@
     flex: 1;
     background: #111;
     min-height: 300px;
-    overflow: hidden;
-    /* 이미지 삐져나가는 거 방지 */
 }
 
 .modal-image-part img {
