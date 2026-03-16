@@ -86,7 +86,7 @@ const CharacterGrid = () => {
                             <div className="modal-layout">
                                 {/* 왼쪽 짤 영역 */}
                                 <div className="modal-image-part">
-                                    <img src={`/src/assets/${selectedChar.id}_combat.webp`} alt={selectedChar.name} onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500/300/600?text=CLASSIFIED' }} />
+                                    <img src={`/assets/${selectedChar.id}_combat.webp`} alt={selectedChar.name} onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500/300/600?text=CLASSIFIED' }} />
                                 </div>
 
                                 {/* 오른쪽 기밀 프로필 영역 */}
