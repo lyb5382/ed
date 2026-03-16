@@ -260,11 +260,10 @@
         flex-direction: row;
     }
 
-    .modal-image-part img {
-        width: 100%;
-        height: 80%;
-        object-fit: cover;
-        filter: contrast(110%) brightness(0.9);
+    .modal-image-part {
+        flex: 1;
+        background: #111;
+        max-height: 150px;
     }
 }
 
